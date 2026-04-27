@@ -1,0 +1,14 @@
+#home-box {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#home-box-body {
+    white-space: pre-wrap;
+}
+
+#home-box-buttons button {
+    width: 100px;
+    height: 50px;
+}

@@ -1,9 +1,26 @@
-
-
-
-
+import HomeBox from "./basic/HomeBox";
+import "./HomePage.css";
 
 const HomePage = () => {
+
+    const buttons = [
+        {
+            "id": 1,
+            "text": "Notes",
+            "linkTo": "/practice-notes"
+        },
+        {
+            "id": 2,
+            "text": "Intervals",
+            "linkTo": "/practice-intervals"
+        }
+    ];
+
+    const linkTo = [
+        "/practice-notes",
+        "/practice-intervals"
+    ]
+
     return (
         <main className="homePage-main">
             <div id="homePage-intro">
@@ -15,7 +32,11 @@ const HomePage = () => {
                 </p>
             </div>
             <div id="homePage-startBox">
-                {/* box */}
+                <HomeBox 
+                    title={"Ready to get Started?"}
+                    body={"Select any of the practices below.\nNote: All practices can also be accessed through the navigation bar at the top of the page."}
+                    buttons={buttons}
+                />
             </div>
         </main>
     );
