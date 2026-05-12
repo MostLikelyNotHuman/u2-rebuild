@@ -1,11 +1,40 @@
+.homePage-main {
+    padding: 20px;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    height: auto;
+}
+
+#homePage-intro {
+    text-align: center;
+}
+
+.divider {
+    background-color: #000;
+    height: 1px;
+    margin: 10px;
+}
+
 #home-box {
+    padding: 20px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
 }
 
 #home-box-body {
-    white-space: pre-wrap;
+   white-space: pre-wrap;
+   text-align: center;
+}
+
+#home-box-buttons {
+    padding: 15px;
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
 }
 
 #home-box-buttons button {

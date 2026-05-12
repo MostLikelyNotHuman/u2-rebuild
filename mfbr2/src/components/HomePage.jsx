@@ -1,3 +1,4 @@
+import Divider from "./basic/Divider";
 import HomeBox from "./basic/HomeBox";
 import "./HomePage.css";
 
@@ -31,10 +32,11 @@ const HomePage = () => {
                     foundation of skills for you to build on in the future!
                 </p>
             </div>
+            <Divider />
             <div id="homePage-startBox">
                 <HomeBox 
                     title={"Ready to get Started?"}
-                    body={"Select any of the practices below.\nNote: All practices can also be accessed through the navigation bar at the top of the page."}
+                    body={"Select any of the practices below.\n\nNote: All practices can also be accessed through the navigation bar at the top of the page."}
                     buttons={buttons}
                 />
             </div>
