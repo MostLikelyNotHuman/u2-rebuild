@@ -40,6 +40,7 @@ const HomePage = () => {
                     buttons={buttons}
                 />
             </div>
+            <Divider />
         </main>
     );
 }

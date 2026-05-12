@@ -1,8 +1,15 @@
+#root {
+    background-color: rgb(41, 41, 41);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
 .homePage-main {
     padding: 20px;
     color: white;
     background-color: rgb(41, 41, 41);
-    height: auto;
 }
 
 #homePage-intro {
@@ -25,8 +32,8 @@
 }
 
 #home-box-body {
-   white-space: pre-wrap;
-   text-align: center;
+    white-space: pre-wrap;
+    text-align: center;
 }
 
 #home-box-buttons {
