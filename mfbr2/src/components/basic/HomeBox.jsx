@@ -3,8 +3,6 @@ import Button from "./Button";
 
 const HomeBox = ({ title, body, buttons }) => {
 
-    {console.log(buttons)};
-
     return (
         <div id="home-box">
             <h3 id="home-box-title">{title}</h3>

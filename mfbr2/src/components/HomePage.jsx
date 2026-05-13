@@ -1,3 +1,5 @@
+import { intervals } from "../assets/intervals";
+import { notes } from "../assets/notes";
 import Divider from "./basic/Divider";
 import HomeBox from "./basic/HomeBox";
 import "./HomePage.css";
@@ -6,21 +8,16 @@ const HomePage = () => {
 
     const buttons = [
         {
-            "id": 1,
-            "text": "Notes",
-            "linkTo": "/practice-notes"
+            id: 1,
+            text: "Notes",
+            linkTo: "/practice-notes"
         },
         {
-            "id": 2,
-            "text": "Intervals",
-            "linkTo": "/practice-intervals"
+            id: 2,
+            text: "Intervals",
+            linkTo: "/practice-intervals"
         }
     ];
-
-    const linkTo = [
-        "/practice-notes",
-        "/practice-intervals"
-    ]
 
     return (
         <main className="homePage-main">
