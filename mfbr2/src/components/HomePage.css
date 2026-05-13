@@ -1,0 +1,69 @@
+#root {
+    background-color: rgb(41, 41, 41);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.homePage-main {
+    padding: 20px;
+    color: white;
+    background-color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+#homePage-intro {
+    text-align: center;
+}
+
+.divider {
+    background-color: #000;
+    height: 1px;
+    margin: 10px;
+}
+
+#homePage-startBox {
+    display: flex;
+    justify-content: center;
+}
+
+#home-box {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(26, 26, 26);
+    border-radius: 10px;
+    max-width: 600px;
+}
+
+#home-box-body {
+    white-space: pre-wrap;
+    text-align: center;
+}
+
+#home-box-buttons {
+    padding: 15px;
+    display: flex;
+    width: 80%;
+    flex-direction: row;
+    justify-content: space-around;
+    max-width: 300px;
+}
+
+#home-box-buttons button {
+    max-width: 120px;
+    min-width: 100px;
+    height: 60px;
+    font-size: 20px;
+    background-color: rgb(56, 56, 56);
+    color: white;
+    border-width: 0;
+    border-radius: 10px;
+}
+
+#home-box-buttons button:hover {
+    background-color: rgb(88, 88, 88);
+    transition: .15s ease-in-out
+}
