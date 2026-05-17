@@ -1,4 +1,16 @@
 .helpPage-main {
+    padding: 20px;
     color: white;
     background-color: rgb(41, 41, 41);
+    font-size: 20px;
+}
+
+p {
+    padding: 0px 10px;
+}
+
+h3 {
+    background-color: rgb(32, 32, 32);
+    padding: 10px;
+    border-radius: 10px;
 }
