@@ -26,13 +26,14 @@ h3 {
     font-size: larger;
     align-items: center;
     border-radius: 10px;
+    margin: 23.4px 0px;
 }
 
 #helpPage-navMenu p {
     margin: 10px;
 }
 
-.divider {
+.helpPage-verticalDivider {
     background-color: #000000;
     height: 100%;
     width: 4px;
@@ -44,7 +45,7 @@ h3 {
     flex-direction: column;
 }
 
-#helpPage-content .divider {
+.helpPage-horizontalDivider {
     background-color: #000;
     height: 1px;
     margin: 10px;

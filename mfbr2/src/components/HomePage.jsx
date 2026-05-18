@@ -29,7 +29,7 @@ const HomePage = () => {
                     foundation of skills for you to build on in the future!
                 </p>
             </div>
-            <Divider />
+            <Divider className={'homePage-horizontalDivider'}/>
             <div id="homePage-startBox">
                 <HomeBox 
                     title={"Ready to get Started?"}
@@ -37,7 +37,7 @@ const HomePage = () => {
                     buttons={buttons}
                 />
             </div>
-            <Divider />
+            <Divider className={'homePage-horizontalDivider'}/>
         </main>
     );
 }

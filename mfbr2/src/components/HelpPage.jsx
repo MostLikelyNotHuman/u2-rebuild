@@ -8,19 +8,55 @@ import allNotes from "../assets/images/help-page/all_notes.png";
 import extraNotes from "../assets/images/help-page/extra_notes.png";
 import flatSymbol from "../assets/images/help-page/flat.png";
 import sharpSymbol from "../assets/images/help-page/sharp.png";
+import { useRef } from "react";
 
 const HelpPage = () => {
+
+    const aboutRef = useRef(null);
+    const notesRef = useRef(null);
+    const intervalsRef = useRef(null);
+
+    const navButtons = [
+        {
+            text: 'About',
+            scrollTo: aboutRef
+        },
+        {
+            text: 'Notes',
+            scrollTo: notesRef
+        },
+        {
+            text: 'Intervals',
+            scrollTo: intervalsRef
+        }
+    ];
+
+    const helpScroll = (ref) => {
+        const position = ref.current.getBoundingClientRect().top + window.scrollY
+        window.scrollTo({
+            top: position - 210,
+            behavior: 'smooth'
+        }) 
+    }
+
     return (
         <main className="helpPage-main">
             <div id="helpPage-navMenu">
                 <h4>Navigation</h4>
-                <p>About</p>
-                <p>Notes</p>
-                <p>Intervals</p>
+                {navButtons.map(button => {
+                    return (
+                        <Button 
+                            text={button.text}
+                            onClick={() => {
+                                helpScroll(button.scrollTo)
+                            }}
+                        />
+                    )
+                })}
             </div>
-            <Divider />
+            <Divider className={'helpPage-verticalDivider'}/>
             <div id="helpPage-content">
-                <div id="helpPage-about">
+                <div id="helpPage-about" ref={aboutRef}>
                     <h3>About This App</h3>
                         <p> Welcome to Music for Beginners! This application is designed for anyone 
                             who is a complete beginner to music, and aims to teach you the very basics of 
@@ -38,8 +74,8 @@ const HelpPage = () => {
                             activities, but is by no means a complete overview of the basics of reading music. 
                             Feel free to use whatever other resources you would like to help improve your skills!</p>
                 </div>
-                <Divider />
-                <div id="helpPage-notes">
+                <Divider className={'helpPage-horizontalDivider'}/>
+                <div id="helpPage-notes" ref={notesRef}>
                     <h3>Notes</h3>
                         <p>Notes are arranged on something called a <strong>staff</strong>, which is this set of horizontal
                             lines.</p>
@@ -66,8 +102,8 @@ const HelpPage = () => {
                             </tbody>
                         </table>    
                 </div>
-                <Divider />
-                <div id="helpPage-intervals">
+                <Divider className={'helpPage-horizontalDivider'}/>
+                <div id="helpPage-intervals" ref={intervalsRef}>
                 <h3>Intervals</h3>
                     <p>The word 'interval' refers to the distance in pitch between two notes.
                         The smallest distance between two notes in western music is called a <strong>half-step</strong> or a <strong>semitone</strong>. 
@@ -103,7 +139,7 @@ const HelpPage = () => {
                         </tbody>
                     </table>
                 </div>
-                <Divider />
+                <Divider className={'helpPage-horizontalDivider'}/>
             </div>
         </main>
     )
