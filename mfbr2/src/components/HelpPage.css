@@ -1,4 +1,6 @@
 .helpPage-main {
+    display: flex;
+    flex-direction: column;
     padding: 20px;
     color: white;
     background-color: rgb(41, 41, 41);
@@ -13,4 +15,25 @@ h3 {
     background-color: rgb(32, 32, 32);
     padding: 10px;
     border-radius: 10px;
+}
+
+#helpPage-intervals {
+    display: flex;
+    flex-direction: column;
+}
+
+table {
+    margin: auto;
+}
+
+tr img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+img {
+   -webkit-filter: invert(1);
+   filter: invert(1);
+   display: block;
+   margin: auto;
 }

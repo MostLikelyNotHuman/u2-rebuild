@@ -1,6 +1,13 @@
 import Divider from "./basic/Divider";
 import Button from "./basic/Button";
+import { intervals } from "../assets/intervals";
 import "./HelpPage.css";
+
+import staff from "../assets/images/help-page/staff.png";
+import allNotes from "../assets/images/help-page/all_notes.png";
+import extraNotes from "../assets/images/help-page/extra_notes.png";
+import flatSymbol from "../assets/images/help-page/flat.png";
+import sharpSymbol from "../assets/images/help-page/sharp.png";
 
 const HelpPage = () => {
     return (
@@ -28,14 +35,14 @@ const HelpPage = () => {
                 <h3>Notes</h3>
                     <p>Notes are arranged on something called a <strong>staff</strong>, which is this set of horizontal
                         lines.</p>
-                            {/* TODO: clean up and import images*/}
+                            <img src={staff} width={400} alt='A blank musical staff, with five lines and four spaces.'></img>
                     <p>Each line and space on the staff represents a different pitch.
                         A common way to remember where each note goes is to use the mnemonic
                         'Every Good Boy Deserves Fudge' for the lines E G B D F, and
                         the word FACE for the spaces F A C and E.</p>
-                            {/* TODO: clean up and import images*/}
+                            <img src={allNotes} width={400} alt='The notes E through F, spanning the staff.'></img>
                     <p>The exercises here use two additional notes that sit just below the staff, C and D.</p>
-                            {/* TODO: clean up and import images*/}
+                            <img src={extraNotes} width={150} alt='The notes C and D, just below the staff.'></img>
                     <p>Maybe you've noticed - the notes start over at A after G! The system only 
                         uses the first seven letters of the alphabet to identify notes. However, there are more 
                         than seven notes - there are actually twelve! Each of these notes can be modified in pitch 
@@ -45,7 +52,8 @@ const HelpPage = () => {
                     <table>
                         <tbody>
                             <tr>
-                                {/* TODO: import images and fill out table*/}
+                                <td width={100}><img src={sharpSymbol} alt='The musical sharp symbol.'></img>Sharp symbol</td>
+                                <td width={100}><img src={flatSymbol} alt='The musical flat symbol.'></img>Flat symbol</td>
                             </tr>
                         </tbody>
                     </table>    
@@ -64,7 +72,7 @@ const HelpPage = () => {
                 <p>Every interval has its own unique name. The following are the ones you'll need to know 
                 for the exercises here.</p>
                 <table id='interval-table'>
-                    <thead>
+                   <thead>
                         <tr>
                             <th>Interval</th>
                             <th>Distance in Half Steps</th>
@@ -72,31 +80,22 @@ const HelpPage = () => {
                         </tr>
                     </thead>
                     <tbody>
-                        {/* TODO: import images and fill out table*/}
+                        {console.log(intervals)}
+                        {intervals.map(interval => {
+                            return (
+                                <tr>
+                                    <th>{interval.name}</th>
+                                    <th>{interval.size}</th>
+                                    <th>
+                                        <img src={interval.image.link} alt={interval.image.alt}></img>
+                                    </th>
+                                </tr>
+                            )
+                        })}
                     </tbody>
                 </table>
             </div>
             <Divider />
-            <div id="helpPage-rhythm">
-            <h3>Rhythm</h3>
-                <p>Notes placed on a staff don't just tell you their pitch, they also tell you their rhythm.
-                    You've seen <strong>Quarter Notes</strong> and <strong>Whole Notes</strong> used in the examples 
-                    above, but there are many more. A whole note represents four beats, a half note represents 
-                    two beats, a quarter note represents a single beat, and so on.</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Beats</th>
-                            <th>Note ...</th>
-                            <th>is equal in duration to:</th>
-                        </tr>
-                    </thead>  
-                    <tbody>
-                        {/* TODO: import images and fill out table*/}
-                    </tbody>  
-                </table>
-                    <p>Theoretically this continues on forever, but notes with a shorter duration are less common.</p>
-            </div>
         </main>
     )
 }
