@@ -33,10 +33,18 @@ const HelpPage = () => {
 
     const helpScroll = (ref) => {
         const position = ref.current.getBoundingClientRect().top + window.scrollY
-        window.scrollTo({
-            top: position - 210,
-            behavior: 'smooth'
-        }) 
+        if (window.innerWidth <= 800) {
+            window.scrollTo({
+                top: position - 225,
+                behavior: 'smooth'
+            }) 
+        }
+        else {
+            window.scrollTo({
+                top: position - 10,
+                behavior: 'smooth'
+            }) 
+        }
     }
 
     return (
