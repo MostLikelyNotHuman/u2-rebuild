@@ -1,7 +1,7 @@
-const Divider = () => {
+const Divider = ({ className }) => {
 
     return (
-        <div className="divider"></div>
+        <div className={className}></div>
     );
 }
 
